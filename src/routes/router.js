@@ -14,7 +14,7 @@ const { userSchema } = require("../schemas/UserSchema");
 const { userUpdateSchema } = require("../schemas/UserUpdateSchema");
 const { customerSchema } = require("../schemas/CustomerSchema");
 const chargeSchemas = require("../schemas/ChargeSchemas");
-const { customerUpdateSchema } = require("../schemas/customerUpdateSchema");
+const { customerUpdateSchema } = require("../schemas/CustomerUpdateSchema");
 
 const UserRegistrationValidation = require("../middleware/UserRegistrationValidation");
 const UserLoggedValidation = require("../middleware/UserLoggedValidation");
