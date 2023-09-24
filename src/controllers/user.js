@@ -13,19 +13,19 @@ const postUser = async (req, res) => {
     return res.status(400).json({ message: "O campo email é obrigatório" });
   }
 
-  try {
-    if (name && email && password === "" && activeStep === 0) {
-      const emailExistsInDatabase = await connection("users")
-        .where({ email })
-        .first();
-      if (emailExistsInDatabase) {
-        return res.status(400).json({ message: "Email já cadastrado" });
-      }
-      if (!emailExistsInDatabase) {
-        return res.status(200).json({ message: "certo" });
-      }
+  if (name && email && password === "" && activeStep === 0) {
+    const emailExistsInDatabase = await connection("users")
+      .where({ email })
+      .first();
+    if (emailExistsInDatabase) {
+      return res.status(400).json({ message: "Email já cadastrado" });
     }
+    if (!emailExistsInDatabase) {
+      return res.status(200).json({ message: "certo" });
+    }
+  }
 
+  try {
     if (activeStep === 1 && password === "") {
       return res
         .status(400)
