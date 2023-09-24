@@ -13,7 +13,7 @@ const { postCharge, getCharge } = require("../controllers/Charge");
 const { userSchema } = require("../schemas/UserSchema");
 const { userUpdateSchema } = require("../schemas/UserUpdateSchema");
 const { customerSchema } = require("../schemas/CustomerSchema");
-const chargeSchemas = require("../schemas/chargeSchemas");
+const chargeSchemas = require("../schemas/ChargeSchemas");
 const { customerUpdateSchema } = require("../schemas/customerUpdateSchema");
 
 const UserRegistrationValidation = require("../middleware/UserRegistrationValidation");
